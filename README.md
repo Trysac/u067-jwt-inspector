@@ -1,7 +1,6 @@
 # jwt-inspector
 
-[![npm version](https://img.shields.io/npm/v/@trysac/jwt-inspector.svg)](https://www.npmjs.com/package/@trysac/jwt-inspector)
-[![license: MIT](https://img.shields.io/npm/l/@trysac/jwt-inspector.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![CI](https://github.com/Trysac/u067-jwt-inspector/actions/workflows/ci.yml/badge.svg)](https://github.com/Trysac/u067-jwt-inspector/actions/workflows/ci.yml)
 
 Inspect and verify JWTs locally with WebCrypto per RFC 7519, 7515 and 8725: explicit algorithm allowlist, key binding and a per-check report
@@ -15,9 +14,15 @@ to the key type, a per-check report and no network access.
 
 ## Install
 
+Not published to npm yet. Build it from a clone, then install it from the local path:
+
 ```sh
-npm install @trysac/jwt-inspector
+git clone https://github.com/Trysac/u067-jwt-inspector.git
+cd u067-jwt-inspector && npm ci && npm run build
+cd ../your-project && npm install ../u067-jwt-inspector
 ```
+
+Imports keep the package name: `import { ... } from "@trysac/jwt-inspector"`.
 
 Requires Node.js 22 or newer. The package ships ES modules with TypeScript declarations.
 
